@@ -15,4 +15,6 @@ export const Main = styled.div`
 
 export const SideBar = styled(motion.div)`
   z-index: 1;
+  height: 100vh;
+  overflow-y: scroll;
 `;

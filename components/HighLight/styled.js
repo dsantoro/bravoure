@@ -14,7 +14,8 @@ export const Season = styled.h6`
 `;
 
 export const Title = styled.h1`
-  font-size: var(--font-size-5);
+  //font-size: var(--font-size-5);
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
   font-weight: bold;
 `;
 

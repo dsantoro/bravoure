@@ -4,7 +4,6 @@ import { Container, Hero, Slider, SliderCard, HighLight } from "../components";
 import poster from "../assets/bbt.jpg";
 
 export default function Home({ result, serieDataResult }) {
-  console.log(serieDataResult);
   return (
     <>
       <Hero image={poster} />

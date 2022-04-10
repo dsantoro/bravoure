@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   padding: calc(var(--size-1) * 1.5) var(--size-1);
   justify-content: space-between;
@@ -11,4 +12,15 @@ export const Container = styled.div`
 export const Text = styled.p`
   margin-bottom: 0;
   font-size: var(--font-size-2);
+  line-height: 1;
+`;
+
+export const InlineItems = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+export const Bold = styled.span`
+  font-weight: bold;
 `;

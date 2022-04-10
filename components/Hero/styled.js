@@ -12,7 +12,8 @@ export const Container = styled(motion.div)`
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.48);
+    mix-blend-mode: multiply;
   }
 
   img {

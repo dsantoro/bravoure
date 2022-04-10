@@ -16,6 +16,8 @@ const MyApp = ({ Component, pageProps }) => {
       <GlobalStyle />
       <Wrapper {...wrapperProps}>
         <Head>
+          {/* eslint-disable */}
+          <link href="/fonts/fonts.css" rel="stylesheet" />
           <title>Bravoure Frontend Assessment</title>
         </Head>
         <Component {...pageProps} />
