@@ -1,5 +1,26 @@
 import styled from "styled-components";
 
+export const ImageOverlay = styled.div`
+  position: relative;
+
+  &:before {
+    content: "";
+    inset: 0;
+    background-color: ${({ isActive }) =>
+      isActive ? "transparent" : "rgba(0, 0, 0, 0.5)"};
+    z-index: 1;
+    position: absolute;
+    transition: background-color 0.6s;
+    will-change: background-color;
+  }
+
+  &:hover {
+    &:before {
+      background-color: transparent;
+    }
+  }
+`;
+
 export const Container = styled.div`
   position: relative;
   cursor: pointer;

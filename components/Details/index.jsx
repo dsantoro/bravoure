@@ -5,7 +5,7 @@ import Image from "next/image";
 import close from "../../assets/close.svg";
 
 export const Details = ({ episode }) => {
-  const { updateEpisode } = useEpisode();
+  const { updateEpisode, updateActiveEpisode } = useEpisode();
   return (
     <S.Container
       key="content"
@@ -29,7 +29,12 @@ export const Details = ({ episode }) => {
         <S.Title>{episode.Title}</S.Title>
         <S.Plot>{episode.Plot}</S.Plot>
       </S.InfoContainer>
-      <S.CloseButton onClick={() => updateEpisode(null)}>
+      <S.CloseButton
+        onClick={() => {
+          updateEpisode(null);
+          updateActiveEpisode(null);
+        }}
+      >
         <Image src={close} width="30" height="30" alt="Close" />
       </S.CloseButton>
     </S.Container>

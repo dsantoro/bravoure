@@ -8,9 +8,14 @@ export function useEpisode() {
 
 export const EpisodeProvider = ({ children }) => {
   const [episode, setEpisode] = useState(null);
+  const [activeEpisode, setActiveEpisode] = useState(0);
 
   const updateEpisode = useCallback((episode) => {
     setEpisode(episode);
+  }, []);
+
+  const updateActiveEpisode = useCallback((activeEpisode) => {
+    setActiveEpisode(activeEpisode);
   }, []);
 
   return (
@@ -18,6 +23,8 @@ export const EpisodeProvider = ({ children }) => {
       value={{
         episode,
         updateEpisode,
+        activeEpisode,
+        updateActiveEpisode,
       }}
     >
       {children}
